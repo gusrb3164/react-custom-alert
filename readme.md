@@ -4,7 +4,7 @@
 - light weight. (gzipped : 1.3KB)
 - customize alert component.
 
-![React toastify](./sample-video.gif 'React toastify')
+![React Custom Alert](https://raw.githubusercontent.com/gusrb3164/react-custom-alert/main/sample-video.gif 'React Custom Alert')
 
 ## Installation
 
