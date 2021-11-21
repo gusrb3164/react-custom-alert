@@ -1,6 +1,6 @@
 {
   "name": "react-custom-alert",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Easliy use react alert and customize",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
