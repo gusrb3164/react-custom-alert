@@ -1,0 +1,48 @@
+{
+  "name": "react-custom-alert",
+  "version": "0.1.0",
+  "description": "Easliy use react alert and customize",
+  "main": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "build:types": "tsc --emitDeclarationOnly"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gusrb3164/react-custom-alert.git"
+  },
+  "keywords": [
+    "react",
+    "toast",
+    "custom",
+    "alert",
+    "notification"
+  ],
+  "author": {
+    "name": "Hyeon Gyu Kim",
+    "email": "gusrb3164@gmail.com",
+    "url": "https://github.com/gusrb3164"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gusrb3164/react-custome-alert/issues"
+  },
+  "homepage": "https://github.com/gusrb3164/react-custom-alert#readme",
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@types/react": "^17.0.24",
+    "prettier": "^2.3.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "typescript": "^4.3.5"
+  },
+  "files": [
+    "dist"
+  ]
+}
