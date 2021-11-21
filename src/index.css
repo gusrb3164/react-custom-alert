@@ -1,0 +1,54 @@
+#--react--toast-container {
+  position: fixed;
+  width: 50%;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+}
+
+@media screen and (max-width: 500px) {
+  #--react--toast-container {
+    width: 95%;
+  }
+}
+.--react--toast-alert {
+  display: grid;
+  grid-template-columns: 30px auto;
+  align-items: center;
+  background-color: white;
+  animation: fadeInExpand 150ms;
+  margin: 15px 0 0 0;
+  padding: 16px 15px;
+  border-radius: 16px;
+  font-size: 15px;
+  box-shadow: 0 20px 30px 0 #cbcbcb, 0 0 8px 0 #cbcbcb;
+}
+
+.--react--toast-alert p {
+  font-weight: 600;
+  margin: 0;
+  word-break: break-word;
+  color: #363636;
+}
+
+.--react--toast-alert svg {
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes fadeInExpand {
+  0% {
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
