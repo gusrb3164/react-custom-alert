@@ -18,15 +18,15 @@ $ yarn add react-custom-alert
 ```js
 import React from 'react';
 import { AlertContainer, alert } from 'react-custom-alert';
-import 'react-custom-alert/index.css'; // import css file from root.
+import 'react-custom-alert/dist/index.css'; // import css file from root.
 
 function RootComponent() {
   return (
     <>
       <App />
-      {/* Add ToastContainer from your root component. */}
+      {/* Add AlertContainer from your root component. */}
       {/* If no floatingTime, the default is 3000ms. */}
-      <ToastContainer floatingTime={5000} />
+      <AlertContainer floatingTime={5000} />
     </>
   );
 }
