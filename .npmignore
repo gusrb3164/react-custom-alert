@@ -5,7 +5,7 @@ examples/
 node_modules/
 typings/
 sandbox/
-test/
+tests/
 bower.json
 CODE_OF_CONDUCT.md
 COLLABORATOR_GUIDE.md
@@ -17,3 +17,4 @@ karma.conf.js
 webpack.*.js
 sauce_connect.log
 src/
+coverage
