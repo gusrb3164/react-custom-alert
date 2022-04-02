@@ -1,6 +1,7 @@
-import React, { CSSProperties, useCallback, useEffect, useState } from 'react';
-import Icon from './Icon';
-import { AlertDetail } from './type';
+import React, { useCallback, useEffect, useState } from "react";
+import type { CSSProperties } from "react";
+import Icon from "./Icon";
+import type { AlertDetail } from "./type";
 
 interface Props {
   floatingTime?: number;
@@ -20,10 +21,10 @@ export const AlertContainer: React.VFC<Props> = ({ floatingTime = 3000, alertSty
   }, []);
 
   useEffect(() => {
-    window.addEventListener('toastAlert', handler as any);
+    window.addEventListener("toastAlert", handler as any);
 
     return () => {
-      window.removeEventListener('toastAlert', handler as any);
+      window.removeEventListener("toastAlert", handler as any);
     };
   }, []);
 

@@ -1,13 +1,13 @@
-import React from 'react';
-import { AlertType } from './type';
+import React from "react";
+import type { AlertType } from "./type";
 
 const Icon: React.VFC<{ type: AlertType }> = ({ type }) => {
   switch (type) {
-    case 'success':
+    case "success":
       return <Success />;
-    case 'warning':
+    case "warning":
       return <Warning />;
-    case 'error':
+    case "error":
       return <Error />;
     default:
       return <Info />;
