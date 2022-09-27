@@ -7,7 +7,7 @@
   "types": "dist/types/index.d.ts",
   "scripts": {
     "build": "rollup -c rollup.config.js",
-    "lint": "eslint 'src/**/*.ts'"
+    "lint": "eslint 'src/**/*.ts' 'src/**/*.tsx'"
   },
   "repository": {
     "type": "git",
