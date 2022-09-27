@@ -1,3 +1,3 @@
-export { AlertContainer } from "./AlertContainer";
-export { alert } from "./alert";
-export type { AlertType, AlertDetail } from "./type";
+export { ToastContainer } from "./ToastContainer";
+export { toast } from "./toastMethods";
+export type { ToastMethods, ToastDetail, ToastOptions, ToastType, ToastContainerProps, ToastProps } from "./type";

@@ -1,3 +1,29 @@
+@keyframes fadeInExpand {
+  0% {
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes opacityTo0 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
 #--react--toast-container {
   position: fixed;
   width: 50%;
@@ -25,6 +51,14 @@
   box-shadow: 0 20px 30px 0 #cbcbcb, 0 0 8px 0 #cbcbcb;
 }
 
+.--react--toast-alert.--toast-show{
+  animation: fadeInExpand ease-in-out 0.2s both;
+}
+
+.--react--toast-alert.--toast-hide{
+  animation: opacityTo0 0.3s ease-in-out 0.2s both;
+}
+
 .--react--toast-alert p {
   font-weight: 600;
   margin: 0;
@@ -37,18 +71,3 @@
   height: 20px;
 }
 
-@keyframes fadeInExpand {
-  0% {
-    opacity: 0;
-  }
-
-  35% {
-    opacity: 1;
-    transform: scale(1.25);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
