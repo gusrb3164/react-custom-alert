@@ -1,7 +1,7 @@
 import React from "react";
-import type { AlertType } from "./type";
+import type { ToastType } from "./type";
 
-const Icon: React.VFC<{ type: AlertType }> = ({ type }) => {
+const Icon: React.VFC<{ type: ToastType }> = ({ type }) => {
   switch (type) {
     case "success":
       return <Success />;
