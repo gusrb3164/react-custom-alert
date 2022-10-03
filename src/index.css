@@ -39,6 +39,7 @@
   }
 }
 .--react--toast-alert {
+  position: relative;
   display: grid;
   grid-template-columns: 30px auto;
   align-items: center;
