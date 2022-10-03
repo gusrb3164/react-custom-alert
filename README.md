@@ -67,8 +67,8 @@ function App() {
 | Prop name      | Description                                  | type                             | default value |
 |----------------|----------------------------------------------|----------------------------------|---------------|
 | containerStyle | Upper element style that contains toast list | undefined \| React.CSSProperties | undefined     |
-| floatingTime   | Time to expose specific toast(ms)            | undefined \| number              | 3000     |
-| toastStyle     | Specific toast style to override             | undefined \| React.CSSProperties | undefined     |
+| floatingTime   | Time to expose default toast(ms)            | undefined \| number              | 3000     |
+| toastStyle     | Default toast style to override             | undefined \| React.CSSProperties | undefined     |
 
 ### toast
 
