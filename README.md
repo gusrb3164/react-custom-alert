@@ -3,13 +3,23 @@
 - Easy to set up and call alert function like calling a hook.
 - light weight. (gzipped : 1.3KB)
 - customize alert component.
+- support to next.js(server-side-rendering).
 
-![React Custom Alert](https://raw.githubusercontent.com/gusrb3164/react-custom-alert/main/sample-video.gif 'React Custom Alert')
+![toast-image](https://user-images.githubusercontent.com/34272561/193571396-3a6e40a9-5196-41a7-86bc-e64afa07cbff.png)
+
+![toast-sample](https://user-images.githubusercontent.com/34272561/193572301-14c26f08-f008-44ed-ae26-99fe18bcf91c.gif)
 
 ## Installation
 
+### npm
+
 ```sh
-$ npm install --save react-custom-alert
+$ npm install react-custom-alert
+```
+
+### yarn
+
+```sh
 $ yarn add react-custom-alert
 ```
 
@@ -17,26 +27,27 @@ $ yarn add react-custom-alert
 
 ```js
 import React from 'react';
-import { AlertContainer, alert } from 'react-custom-alert';
+import { ToastContainer, toast } from 'react-custom-alert';
 import 'react-custom-alert/dist/index.css'; // import css file from root.
 
 function RootComponent() {
   return (
     <>
       <App />
-      {/* Add AlertContainer from your root component. */}
+      {/* Add ToastContainer from your root component. */}
+      {/* If you use next.js, add it to app.js */}
       {/* If no floatingTime, the default is 3000ms. */}
-      <AlertContainer floatingTime={5000} />
+      <ToastContainer floatingTime={5000} />
     </>
   );
 }
 
 function App() {
-  // alert type : info | success | warning | error
-  const alertInfo = () => alert({ message: 'info', type: 'info' });
-  const alertSuccess = () => alert({ message: 'success', type: 'success' });
-  const alertWarning = () => alert({ message: 'warning', type: 'warning' });
-  const alertError = () => alert({ message: 'error', type: 'error' });
+  // toast methods : info | success | warning | error
+  const alertInfo = () => toast.info('info');
+  const alertSuccess = () => toast.success('success');
+  const alertWarning = () => toast.warning('warning');
+  const alertError = () => toast.error('error');
 
   return (
     <div>
@@ -48,3 +59,28 @@ function App() {
   );
 }
 ```
+
+## Guide
+
+### ToastContainer
+
+| Prop name      | Description                                  | type                             | default value |
+|----------------|----------------------------------------------|----------------------------------|---------------|
+| containerStyle | Upper element style that contains toast list | undefined \| React.CSSProperties | undefined     |
+| floatingTime   | Time to expose specific toast(ms)            | undefined \| number              | 3000     |
+| toastStyle     | Specific toast style to override             | undefined \| React.CSSProperties | undefined     |
+
+### toast
+
+Toast has four methods(info, success, warning, error).
+
+Each method has the same type as the table below.
+
+```ts
+type ToastMethods = (message: string, options?: ToastOptions) => void;
+```
+
+| Toast options | Description                        | type                             | default value |
+|---------------|------------------------------------|----------------------------------|---------------|
+| floatingTime  | Time to expose specific toast(ms)  | undefined \| number              | undefined     |
+| toastStyle    | Specific toast style to override   | undefined \| React.CSSProperties | undefined     |
