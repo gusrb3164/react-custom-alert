@@ -1,6 +1,6 @@
 {
   "name": "react-custom-alert",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Easliy use react alert and customize",
   "module": "dist/index.esm.js",
   "main": "dist/index.js",
